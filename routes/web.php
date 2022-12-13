@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('mailchimp');
+    return view('site.main-template', [
+        'page'  => 'home',
+        'title' => 'Home',
+    ]);
+});
+
+Route::get('/mailchimp-markdown-test', function () {
+    return view('site.main-template', [
+        'page'  => 'mailchimp-markdown-test',
+        'js'    => 'mailchimp-markdown-test',
+        'title' => 'Mailchimp Markdown Test',
+    ]);
 });
