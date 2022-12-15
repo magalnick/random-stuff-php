@@ -16,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('site.main-template', [
         'page'  => 'home',
-        'title' => 'Home',
+        'title' => 'Random Stuff in PHP',
+    ]);
+});
+
+Route::get('/clinicomp-code-test', function () {
+    return view('site.main-template', [
+        'page'  => 'clinicomp-code-test',
+        'js'    => 'clinicomp-code-test',
+        'title' => 'CliniComp Code Test',
     ]);
 });
 

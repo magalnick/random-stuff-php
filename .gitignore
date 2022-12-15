@@ -4,6 +4,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/ztrash
 .env
 .env.backup
 .env*
