@@ -70,7 +70,7 @@
     const Init = () => {
         $("#test-substr-button")
             .off("click")
-            .on("click", function(e) {
+            .on("click", () => {
                 let name = $.trim($("#test-substr-name").val());
                 let surname = $.trim($("#test-substr-surname").val());
                 let age = parseInt($("#test-substr-age").val());
@@ -82,7 +82,7 @@
 
         $("#test-a-b-button")
             .off("click")
-            .on("click", function(e) {
+            .on("click", () => {
                 let a = parseInt($("#test-a-b-a").val());
                 let b = parseInt($("#test-a-b-b").val());
 
