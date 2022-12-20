@@ -52,6 +52,12 @@
             return jqxhr.status + " (" + jqxhr.statusText + ")";
         }
 
+        static loadSampleMarkdown() {
+            $("#markdown-source").val(
+                $("#sample-markdown").val()
+            );
+        }
+
         static renderConvertedTextarea(html) {
             if (typeof html !== "string") {
                 html = "";
