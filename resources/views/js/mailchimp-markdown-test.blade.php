@@ -90,14 +90,4 @@
             this.renderHtml("");
         }
     }
-
-    class FunWithText {
-        static cleanString(string) {
-            if (typeof string !== "string") {
-                return "";
-            }
-
-            return $.trim(string);
-        }
-    }
 </script>
