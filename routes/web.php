@@ -20,6 +20,21 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/code-tests', function () {
+    return view('site.main-template', [
+        'page'  => 'code-tests',
+        'title' => 'Code Tests',
+    ]);
+});
+
+Route::get('/leantechniques-photo-album', function () {
+    return view('site.main-template', [
+        'page'  => 'leantechniques-photo-album',
+        'js'    => 'leantechniques-photo-album',
+        'title' => 'Lean TECHniques Photo Album',
+    ]);
+});
+
 Route::get('/clinicomp-code-test', function () {
     return view('site.main-template', [
         'page'  => 'clinicomp-code-test',

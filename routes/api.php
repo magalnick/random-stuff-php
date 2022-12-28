@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('photo-album/{album_id}', [
+    App\Http\Controllers\PhotoAlbumController::class,
+    'getAlbum',
+    'as' => 'photo-album',
+]);
+
 Route::post('convert-to-html', [
     App\Http\Controllers\ConvertToHtmlController::class,
     'convert',
