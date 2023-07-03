@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('site.main-template', [
         'page'  => 'home',
-        'title' => 'Random Stuff in PHP',
+        'title' => 'Random Stuff',
     ]);
 });
 

@@ -1,5 +1,5 @@
 @php
-    $site_name = 'Random Stuff in PHP';
+    $site_name = 'Random Stuff';
     $page_js = isset($js) ? "js.{$js}" : null;
 @endphp
 @include('site.header')
