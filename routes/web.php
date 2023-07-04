@@ -20,6 +20,21 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/presentations', function () {
+    return view('site.main-template', [
+        'page'  => 'presentations',
+        'title' => 'Presentations',
+    ]);
+});
+
+Route::get('/presentations/clearhello-solid', function () {
+    return view('site.main-template', [
+        'page'  => 'presentations.clearhello-solid',
+        'js'    => 'presentations.clearhello-solid',
+        'title' => 'ClearHello - SOLID and Other Design Principles',
+    ]);
+});
+
 Route::get('/code-tests', function () {
     return view('site.main-template', [
         'page'  => 'code-tests',
