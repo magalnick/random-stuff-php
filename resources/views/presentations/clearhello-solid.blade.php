@@ -10,6 +10,9 @@
     <div class="col-6">
         <p>
             <button class="bg-info" id="solid-sig-original-button" onclick="SIG.factory('solid-sig-original-content').runOriginalCode()">Run original code</button>
+            <button class="bg-info" id="solid-sig-original-button-positive" onclick="SIG.factory('solid-sig-original-content').runOriginalCode(20)">Positive</button>
+            <button class="bg-info" id="solid-sig-original-button-negative" onclick="SIG.factory('solid-sig-original-content').runOriginalCode(-3)">Negative</button>
+            <button class="bg-info" id="solid-sig-original-button-string" onclick="SIG.factory('solid-sig-original-content').runOriginalCode('hello')">String</button>
             <button class="bg-close" onclick="SIG.factory('solid-sig-original-content').clearDisplay();">Clear display</button>
         </p>
         <div class="mt-2" id="solid-sig-original-content"></div>
@@ -17,6 +20,9 @@
     <div class="col-6">
         <p>
             <button class="bg-info" id="solid-sig-refactored-button" onclick="SIG.factory('solid-sig-refactored-content').runRefactoredCode()">Run refactored code</button>
+            <button class="bg-info" id="solid-sig-refactored-button-positive" onclick="SIG.factory('solid-sig-refactored-content').runRefactoredCode(20)">Positive</button>
+            <button class="bg-info" id="solid-sig-refactored-button-negative" onclick="SIG.factory('solid-sig-refactored-content').runRefactoredCode(-3)">Negative</button>
+            <button class="bg-info" id="solid-sig-refactored-button-string" onclick="SIG.factory('solid-sig-refactored-content').runRefactoredCode('hello')">String</button>
             <button class="bg-close" onclick="SIG.factory('solid-sig-refactored-content').clearDisplay();">Clear display</button>
         </p>
         <div class="mt-2" id="solid-sig-refactored-content"></div>
