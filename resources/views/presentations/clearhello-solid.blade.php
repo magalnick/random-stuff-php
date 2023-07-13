@@ -36,7 +36,9 @@
             <button class="bg-info" onclick="(new Animal()).go();">Animal on its own</button>
             <button class="bg-info" onclick="(new Mammal()).go();">Mammal on its own</button>
             <button class="bg-info" onclick="(new Mammal(new Dog())).go();">Dog</button>
+            <button class="bg-info" onclick="(new Mammal(new Husky())).go();">Husky</button>
             <button class="bg-info" onclick="(new Mammal(new Panda())).go();">Panda</button>
+            <button class="bg-info" onclick="(new Mammal(new Bear())).go();">Bear</button>
             <button class="bg-info" onclick="(new Fish()).go();">Fish</button>
             <button class="bg-close" onclick="OLDDisplay.clear();">Clear display</button>
         </p>

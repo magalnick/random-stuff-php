@@ -18,28 +18,28 @@
             this.element.html("");
         }
 
-        async runOriginalCode(iteration) {
+            async runOriginalCode(iteration) {
             if (iteration) {
                 if (typeof iteration === "number") {
                     if (iteration > 0) {
                         this.element.append(`<div class="mt-1">${iteration}</div>`);
-                    // } else {
-                    //     this.element.html("");
-                    //     iteration = 1;
-                    //     while (iteration <= 10) {
-                    //         await time.wait(500);
-                    //         await this.runOriginalCode(iteration);
-                    //         iteration++;
-                    //     }
+                    } else {
+                        this.element.html("");
+                        iteration = 1;
+                        while (iteration <= 10) {
+                            await time.wait(500);
+                            await this.runOriginalCode(iteration);
+                            iteration++;
+                        }
                     }
-                // } else {
-                //     this.element.html("");
-                //     iteration = 1;
-                //     while (iteration <= 10) {
-                //         await time.wait(500);
-                //         await this.runOriginalCode(iteration);
-                //         iteration++;
-                //     }
+                } else {
+                    this.element.html("");
+                    iteration = 1;
+                    while (iteration <= 10) {
+                        await time.wait(500);
+                        await this.runOriginalCode(iteration);
+                        iteration++;
+                    }
                 }
             } else {
                 this.element.html("");
@@ -53,7 +53,35 @@
         }
 
         async runRefactoredCode() {
-            this.element.append("<div>hello</div>");
+            this.clearDisplay();
+            try {
+                let iteration = 1;
+                while (iteration <= 10) {
+                    await time.wait(500);
+                    await this.writeNumberToDisplay(iteration);
+                    iteration++;
+                }
+            } catch (e) {
+                this.element.append(`<div class="mt-1">${e.message}</div>`);
+            }
+        }
+
+        async writeNumberToDisplay(value) {
+            if (!value) {
+                throw new Error("No value specified.");
+            }
+            if (typeof value !== "number") {
+                throw new Error(`Invalid value: ${value}`);
+            }
+            value = Math.floor(value);
+            if (isNaN(value)) {
+                throw new Error(`NaN value: ${value}`);
+            }
+            if (value <= 0) {
+                throw new Error(`Invalid value: ${value}, it must be a positive number.`);
+            }
+
+            this.element.append(`<div class="mt-1">${value}</div>`);
         }
     }
 </script>
@@ -176,6 +204,16 @@
         }
     }
 
+    class Husky extends Dog {
+        name() {
+            return "Poncho";
+        }
+
+        where() {
+            return "cold, snowy tundra";
+        }
+    }
+
     class Panda {
         name() {
             return "Po";
@@ -203,6 +241,36 @@
 
         where() {
             return "bamboo forest";
+        }
+    }
+
+    class Bear {
+        name() {
+            return "Baloo";
+        }
+
+        isA() {
+            return "big fat cuddly teddy bear";
+        }
+
+        covering() {
+            return "furry fur";
+        }
+
+        says() {
+            return "take a glance at those fancy ants";
+        }
+
+        eats() {
+            return "honey";
+        }
+
+        moves() {
+            return "shit";
+        }
+
+        where() {
+            return "woods";
         }
     }
 
