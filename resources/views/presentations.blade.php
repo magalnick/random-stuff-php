@@ -4,7 +4,10 @@
             <a href="/presentations/clearhello-solid">ClearHello - SOLID and Other Design Principles</a>
         </div>
         <div>
-            <a href="https://prezi.com/p/hrffhombjno3/?present=1" target="_blank">Introduction to Krav Maga</a>
+            <a href="/presentations/introduction-to-krav-maga">Introduction to Krav Maga</a>
+        </div>
+        <div>
+            <a href="/presentations/presentation-on-presenting-presentations">Presentation on Presenting Presentations</a>
         </div>
     </div>
 </div>

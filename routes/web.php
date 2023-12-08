@@ -35,11 +35,17 @@ Route::get('/presentations/clearhello-solid', function () {
     ]);
 });
 
-Route::get('/presentations/clearhello-solid', function () {
+Route::get('/presentations/introduction-to-krav-maga', function () {
     return view('site.main-template', [
-        'page'  => 'presentations.clearhello-solid',
-        'js'    => 'presentations.clearhello-solid',
-        'title' => 'ClearHello - SOLID and Other Design Principles',
+        'page'  => 'presentations.introduction-to-krav-maga',
+        'title' => 'Introduction to Krav Maga',
+    ]);
+});
+
+Route::get('/presentations/presentation-on-presenting-presentations', function () {
+    return view('site.main-template', [
+        'page'  => 'presentations.presentation-on-presenting-presentations',
+        'title' => 'Presentation on Presenting Presentations',
     ]);
 });
 
