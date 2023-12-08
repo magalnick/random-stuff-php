@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('site.main-template', [
         'page'  => 'home',
-        'title' => 'Random Stuff',
+        'title' => 'Yor Mom!',
     ]);
 });
 
@@ -35,6 +35,14 @@ Route::get('/presentations/clearhello-solid', function () {
     ]);
 });
 
+Route::get('/presentations/clearhello-solid', function () {
+    return view('site.main-template', [
+        'page'  => 'presentations.clearhello-solid',
+        'js'    => 'presentations.clearhello-solid',
+        'title' => 'ClearHello - SOLID and Other Design Principles',
+    ]);
+});
+
 Route::get('/code-tests', function () {
     return view('site.main-template', [
         'page'  => 'code-tests',
@@ -42,26 +50,26 @@ Route::get('/code-tests', function () {
     ]);
 });
 
-Route::get('/leantechniques-photo-album', function () {
+Route::get('/code-tests/leantechniques-photo-album', function () {
     return view('site.main-template', [
-        'page'  => 'leantechniques-photo-album',
-        'js'    => 'leantechniques-photo-album',
+        'page'  => 'code-tests.leantechniques-photo-album',
+        'js'    => 'code-tests.leantechniques-photo-album',
         'title' => 'Lean TECHniques Photo Album',
     ]);
 });
 
-Route::get('/clinicomp-code-test', function () {
+Route::get('/code-tests/clinicomp-code-test', function () {
     return view('site.main-template', [
-        'page'  => 'clinicomp-code-test',
-        'js'    => 'clinicomp-code-test',
+        'page'  => 'code-tests.clinicomp-code-test',
+        'js'    => 'code-tests.clinicomp-code-test',
         'title' => 'CliniComp Code Test',
     ]);
 });
 
-Route::get('/mailchimp-markdown-test', function () {
+Route::get('/code-tests/mailchimp-markdown-test', function () {
     return view('site.main-template', [
-        'page'  => 'mailchimp-markdown-test',
-        'js'    => 'mailchimp-markdown-test',
+        'page'  => 'code-tests.mailchimp-markdown-test',
+        'js'    => 'code-tests.mailchimp-markdown-test',
         'title' => 'Mailchimp Markdown Test',
     ]);
 });
